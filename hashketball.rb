@@ -217,7 +217,7 @@ def most_points_scored
         points = stats[key][:points]
         if points > most_points
           most_points = points 
-          player = key 
+          player = "key" 
         end
       end
     end
