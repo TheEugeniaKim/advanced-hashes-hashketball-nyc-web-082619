@@ -228,6 +228,14 @@ end
 def winning_team 
   hash = Hash.new(0)
   game_hash.each do |team, team_data|
+    team_data[:players].each do |stats|
+      stats.each do |key, value|
+        hash[team_data[:team_name]] += stats[key][:points]
+      end
+    end
+  end
+  hash.key(hash.values.max)
+end
 
   
 
