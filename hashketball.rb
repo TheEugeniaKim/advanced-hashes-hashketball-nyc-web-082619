@@ -211,19 +211,12 @@ def most_points_scored
   most_points = 0 
   player = "name"
   
-  game_hash.each do |status, team|
-    team[:players].each do |stats|
-      stats.each do |key, value|
-        points = stats[key][:points]
-        if points > most_points
-          most_points = points 
-          player = key 
-        end
-      end
-    end
-  end
-player
-end
+  
+
+
+
+
+
 
 def winning_team 
  home_team = 0 
