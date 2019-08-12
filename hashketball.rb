@@ -226,16 +226,19 @@ player
 end
 
 def winning_team 
-  hash = Hash.new(0)
-  game_hash.each do |team, team_data|
-    team_data[:players].each do |stats|
-      stats.each do |key, value|
-        hash[team_data[:team_name]] += stats[key][:points]
-      end
-    end
-  end
-  hash.key(hash.values.max)
-end
+ home_team = 0 
+ away_team = 0 
+ 
+ game_hash.each do |status, team|
+   team[:players].each do |data|
+     if game_hash[:home]
+       home_team += data[:points]
+     else
+       away_team += data[:points]
+     end
+   end
+ end
+ home_team > away_team ? game_hash[:home][:team_name] : game_hash[:away][]
 
   
 
