@@ -225,7 +225,9 @@ def most_points_scored
 player
 end
 
-
+def winning_team 
+  hash = Hash.new(0)
+  game_hash.each do |team, team_data|
 
   
 
