@@ -220,7 +220,7 @@ def most_points_scored
   game_hash.each do |status, team|
     team[:players].each do |data|
       if data[:points] == most_points
-        most_points = data[:points]
+        return data[:player_name]
       end
     end
   end
